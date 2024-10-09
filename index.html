@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <main>
+    <section class="contact-sec">
+      <form action="" class="contact-form" id="contactForm">
+        <h1>Contact us</h1>
+        <div class="input-grid">
+          <div class="input-group">
+            <label for="firstName">First Name <small class="text-success">*</small></label>
+            <input type="text" name="first-name" id="firstName" class="form-control">
+            <div id="error-FirstName" class="hidden error-text">This field is required</div>
+          </div>
+          <div class="input-group">
+            <label for="lastName">Last Name <small class="text-success">*</small></label>
+            <input type="text" name="last-name" id="lastName" class="form-control">
+            <div id="error-lastName" class="hidden error-text">This field is required</div>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="email">Email Address <small class="text-success">*</small></label>
+          <input type="email" name="email-address" id="email" class="form-control">
+          <div id="error-Email" class="hidden error-text">This field is required</div>
+        </div>
+        <div class="input-group">
+          <label>Query Type <small class="text-success">*</small></label>
+          <div class="input-grid">
+            <label class="form-check" for="general">
+              <input class="form-check-input" type="radio" id="general" name="query-type" value="general">
+              <span class="form-check-text">General Enquiry</span>
+            </label>
+            <label class="form-check" for="support">
+              <input class="form-check-input" type="radio" id="support" name="query-type" value="support">
+              <span class="form-check-text">Support Request</span>
+            </label>
+          </div>
+          <div id="error-Query" class="hidden error-text">Please select a query type</div>
+        </div>
+        <div class="input-group">
+          <label for="message">Message <small class="text-success">*</small></label>
+          <textarea name="message" id="message" rows="3" class="form-control"></textarea>
+          <div id="error-Message" class="hidden error-text">This field is required</div>
+        </div>
+        <div class="input-group">
+          <label class="form-check" for="checkConsent">
+            <input class="form-check-input" type="checkbox" value="" id="checkConsent">
+            <span class="form-check-text" >I consent to being contacted by the team <small class="text-success">*</small></span>
+          </label>
+          <div id="error-Consent" class="hidden error-text">To submit this form, please consent to being contacted</div>
+        </div>
+        <div class="input-btn">
+          <button type="submit" id="submitBtn" class="btn submit-btn">Submit</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/krishanprajapat23">Krish</a>.
+  </footer>
+
+  <!-- popup -->
+  <div id="submitPopup" class="hidden submit-popup">
+    <div class="submit-popup-content">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21">
+        <path fill="#fff" d="M14.28 7.72a.748.748 0 0 1 0 1.06l-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.75.75 0 0 1 1.06 0Zm5.47 2.78A9.75 9.75 0 1 1 10 .75a9.76 9.76 0 0 1 9.75 9.75Zm-1.5 0A8.25 8.25 0 1 0 10 18.75a8.26 8.26 0 0 0 8.25-8.25Z"></path>
+      </svg>
+      <div>Message Sent!</div>
+    </div>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>

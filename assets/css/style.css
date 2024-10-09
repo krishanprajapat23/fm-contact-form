@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+.error-text {
+  color: hsl(0, 66%, 54%);
+}
+
+.text-success {
+  color: hsl(169, 82%, 27%);
+}
+
+p {
+  margin: 0;
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1.5;
+  color: hsl(187, 24%, 22%);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.75rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: hsl(187, 24%, 22%);
+  background-color: hsl(0, 0%, 100%);
+  background-clip: padding-box;
+  border: 1px solid hsl(186, 15%, 59%);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.5rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control:hover {
+  border-color: hsl(169, 82%, 27%);
+}
+.form-control:focus {
+  color: hsl(187, 24%, 22%);
+  background-color: hsl(0, 0%, 100%);
+  border-color: hsl(169, 82%, 27%);
+  outline: 0;
+}
+
+.form-check {
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 1.5em;
+  margin-bottom: 0.125rem;
+}
+.form-check .form-check-input {
+  float: left;
+  margin-left: -1.5em;
+}
+
+.form-check-input {
+  width: 18px;
+  height: 18px;
+  vertical-align: top;
+  background-color: hsl(0, 0%, 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+  border-width: 2px;
+}
+
+.form-check-input[type=radio] {
+  border-radius: 50%;
+  border-width: 1px;
+}
+
+.form-check-input:checked[type=checkbox] {
+  border-color: transparent;
+  background-size: 20px 20px;
+  background-image: url("../images/icon-checkbox-check.svg");
+}
+
+.form-check-input:checked[type=radio] {
+  border-color: transparent;
+  background-image: url("../images/icon-radio-selected.svg");
+  background-size: 20px 20px;
+}
+
+.form-control.invalid {
+  border-color: hsl(0, 66%, 54%) !important;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  color: hsl(187, 24%, 22%);
+  background-color: hsl(148, 38%, 91%);
+  font-size: 1rem;
+  font-weight: 400;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-popup {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: hsl(187, 24%, 22%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  position: absolute;
+  top: 30px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.45s ease-in-out, opacity 0.3s ease-in-out;
+}
+.submit-popup .submit-popup-content {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.submit-popup p {
+  color: hsl(186, 15%, 59%);
+  font-size: 14px;
+}
+.submit-popup.hidden {
+  display: block;
+  opacity: 0;
+  transform: translateY(-200%);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main > section {
+  flex: 1;
+}
+
+.contact-sec {
+  max-width: 700px;
+  padding: 3rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  background-color: hsl(0, 0%, 100%);
+}
+.contact-sec h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: hsl(187, 24%, 22%);
+  text-transform: capitalize;
+}
+.contact-sec .submit-btn {
+  background-color: hsl(169, 82%, 27%);
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+}
+
+label.form-check {
+  cursor: pointer;
+}
+label.form-check.active {
+  background-color: hsl(148, 38%, 91%);
+  border-color: hsl(169, 82%, 27%);
+}
+
+.form-check-text {
+  margin-left: 10px;
+}
+
+.input-grid {
+  display: grid;
+  gap: 0 1rem;
+}
+@media (min-width: 567px) {
+  .input-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.input-grid .form-check {
+  border: 1px solid hsl(186, 15%, 59%);
+  padding-block: 0.9rem;
+  padding-inline: 2.5em 1em;
+  border-radius: 0.5rem;
+}
+@media (max-width: 567px) {
+  .input-grid .form-check:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+.input-grid .form-check .form-check-text {
+  font-size: 1rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+.input-group label {
+  font-size: 14px;
+  color: hsl(187, 24%, 22%);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-check label {
+  font-size: 1rem;
+  color: hsl(187, 24%, 22%);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.attribution {
+  display: none;
+  text-align: center;
+  font-size: 14px;
+  margin: 1rem auto;
+  color: rgba(43, 66, 70, 0.75);
+}
+.attribution a {
+  color: hsl(169, 82%, 27%);
+  transition: color 0.3s ease;
+}
+.attribution a:hover {
+  color: rgba(12, 125, 105, 0.5);
+}/*# sourceMappingURL=style.css.map */
